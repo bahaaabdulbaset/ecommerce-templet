@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>E-Commerce Recommendation System</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+<body>
+
+
+
+<!--/******************************************************(1(navbar))**************************************************************/-->
+
+
+<div class="jumbotron-fluid">
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="images/logo.png" width="65px;" height="40px;" class=" img-fluid">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="Home.html">productes</a>
+						<a class="dropdown-item" href="Single%20Product.html">products details</a>
+						<a class="dropdown-item" href="my-Shopping-Cart.html">Shopping Card</a>
+						<a class="dropdown-item" href="contact-us.html">contact us</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<a href="login.html" class="btn btn-success my-2 my-sm-0 rounded border-0" type="submit">Login</a>
+			</form>
+
+
+		</div>
+	</nav>
+
+</div>
+
+<!--/******************************************************(1(navbar))**************************************************************/-->
+
+
+
+
+
+
+
+
+<div class="jumbotron jumbotron-fluid bg-light my-0">
+	<div class="container">
+		<div class="row m-0 m-0">
+			<div class="col-12">
+				<div class="text-center">
+					<h4 class="display-4">
+						My Shopping Cart
+					</h4>
+					<p class="text-muted">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias delectus ducimus ea earum
+						eius eligendi error est expedita harum illum impedit in ipsum laboriosam laborum magnam,
+						modi officia officiis quos, sit, tenetur vitae voluptas voluptate? A possimus quidem
+						voluptatem.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--/******************************************************(2)**************************************************************/-->
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------ـ/-->
+
+<div class="container">
+	<div class="row m-0 my-4">
+		<div class="col-12">
+			<div class="card shadow">
+
+				<div class="card-body mb-0">
+					<table class="table-bordered table table-hover table-bordered mb-0">
+						<thead>
+						<tr class="text-center">
+							<th>#</th>
+							<th>Name</th>
+							<th>Price</th>
+							<th>Discount</th>
+							<th>Amount</th>
+							<th>Overall</th>
+							<th>Options</th>
+						</tr>
+						</thead>
+						<tbody>
+
+						<tr class="text-center">
+							<td>bahaa</td>
+							<td width="35%">mobile</td>
+							<td>1000</td>
+							<td>20%</td>
+							<td>800</td>
+							<td>800</td>
+							<td>
+
+
+								<a href="/products/{{$item->product_id}}/details"class="text-decoration-none btn btn-info btn-sm mb-1">More Details</a>
+
+								<form action="/shopping-cart/delete" method="POST" id="removeForm">
+
+									<input type="hidden" name="product" value="{{$product->id}}">
+									<button id="removeBtn"
+											type="submit" class="btn btn-danger btn-sm">
+										Remove
+									</button></form></td></tr>
+
+						<tr class="text-center">
+							<td colspan="5">Overall Price</td>
+							</td>
+							<td class="font-weight-bold" colspan="2">
+						</tr>
+						</tbody>
+					</table>
+					<div class="text-center mt-3 form-inline">
+						<button class="btn btn-success mr-2 ml-auto">
+							Checkout Order
+						</button>
+						<form action="/shopping-cart/delete-all"
+							  class="mr-auto"
+							  method="POST" id="removeAllForm">
+							
+							<button class="btn btn-danger" id="removeAllBtn">
+								Cancel Order
+							</button></form></div></div>
+
+
+
+			</div></div></div></div>
+
+<!-------------------------------------------------------------------------------------------------------------------------------ـ/-->
+
+
+
+
+
+
+
+
+
+<!--/******************************************************(footer)**************************************************************/-->
+
+<div class="jumbotron-fluid color-font-labny">
+
+<div class="container">
+
+
+	<div class="row m-0 m-0 pt-5 pb-5">
+		<div class="col-12 col-md-6 col-lg-3 mt-3">
+			<div class="card border-0">
+				<div class="card-body bg-info">
+					<h5 class="color_white">Quick Links</h5>
+
+						<hr style="background-color: #fff;">
+					    <ul class="list-unstyled ml-2">
+							<li class="d-block"><a href="/about-us" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> About Us</span></a></li>
+							<li class="d-block"><a href="D:/corces/SELECT CORSE/html+css+bootstrap/project 1/contact-us.html" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> Contact Us</span></a></li>
+							<li class="d-block"><a href="/about-us" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> FAQ</span></a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-12 col-md-6 col-lg-3 mt-3">
+			<div class="card border-0">
+				<div class="card-body bg-info">
+					<h5 class="color_white">Top Searches</h5>
+
+					<hr style="background-color: #fff;">
+					<ul class="list-unstyled ml-2">
+						<li class="d-block"><a href="/about-us" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> Labore blanditiis tempor</span></a></li>
+						<li class="d-block"><a href="/about-us" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> Aut sed excepturi nesciunt </span></a></li>
+						<li class="d-block"><a href="/about-us" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> Error consequatur repellat</span></a></li>
+						<li class="d-block"><a href="/about-us" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> Atque odio fugit dicta </span></a></li>
+						<li class="d-block"><a href="/about-us" class="text-decoration-none li-hover"><span class="fa fa-caret-right color_white"></span><span class="color_white"> Accusamus libero commod</span></a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-12 col-md-6 col-lg-3 mt-3">
+			<div class="card border-0">
+				<div class="card-body bg-info">
+					<h5 class="color_white">Contact Us</h5>
+
+					<hr style="background-color: #fff;">
+					<ul class="list-unstyled ml-2">
+						<li class="d-block"><span class="fa fa-address-card color_white"></span><span class="color_white"> Labore blanditiis tempor</span></li>
+						<li class="d-block"><span class="fa fa-phone-square color_white"></span><span class="color_white"> (000) 0000-0000-000</span></li>
+						<li class="d-block"><span class="fa fa-phone-volume color_white"></span><span class="color_white"> (000) 0000-0000-000</span></li>
+						<li class="d-block"><span class="fa fa-at color_white"></span><span class="color_white"> lorem@ipsum.dolor.com</span></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-3 mt-3">
+			<div class="card border-0">
+				<div class="card-body bg-info">
+					<h5 class="color_white">Follow Us</h5>
+
+					<hr style="background-color: #fff;">
+					<ul class="list-unstyled ml-2">
+						<a href="#" class="mr-1 color_white"><span class="fab fa-facebook fa-2x color_white"></span></a>
+						<a href="#" class="mr-1 color_white"><span class="fab fa-twitter fa-2x color_white"></span></a>
+						<a href="#" class="mr-1 color_white"><span class="fab fa-linkedin fa-2x color_white"></span></a>
+						<a href="#" class="mr-1 color_white"><span class="fab fa-google-plus fa-2x color_white"></span></a>
+						<a href="#" class="mr-1 color_white"><span class="fab fa-pinterest fa-2x color_white"></span></a>
+						<a href="#" class="mr-1 color_white"><span class="fab fa-instagram fa-2x color_white"></span></a>
+						<a href="#" class="mr-1 color_white"><span class="fab fa-youtube fa-2x color_white"></span></a>
+                    </ul>
+
+
+
+					<h5 class="color_white pt-2">Quick Links</h5>
+
+					<hr style="background-color: #fff;">
+					<ul class="list-unstyled ml-2">
+						<a href="#" class="mr-1 color_white"><span class="fab fa-google-play fa-2x color_white"></span></a>
+						<a href="#" class="mr-1 color_white"><span class="fab fa-app-store-ios fa-2x color_white"></span></a>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	<div class="row m-0 m-0">
+		<div class="col-12 text-center">
+			<span class="color_white">© All rights are reserved.</span>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<!--/******************************************************(footer)**************************************************************/-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

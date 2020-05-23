@@ -1,0 +1,49 @@
+
+
+
+li{
+	display: inline-block;
+	padding-top: 12px;
+	padding-left: 5px;
+
+}
+
+
+
+.h1-font{
+	font-family:Times New Roman, Times, serif;
+}
+
+
+
+.color-font-labny{
+	background-color: #17a2b8;
+
+}
+
+.color-font-labny2{
+	background-color: #E0F2F9;
+}
+
+
+.color_labny{
+	color: #17a2b8;
+}
+
+
+
+.color_labny2{
+	color: #E0F2F9;
+}
+
+.color_white{
+	color: #fff;
+}
+
+
+.card-hover:hover{
+
+	box-shadow:0 0 11px rgba(33,33,33,.2);
+
+}
+
